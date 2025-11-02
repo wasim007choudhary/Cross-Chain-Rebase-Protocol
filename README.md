@@ -58,8 +58,11 @@ Collateral must remain *consolidated on a single chain* to avoid:
 | `CCRToken` | The rebase-aware ERC20 token |
 | `CCRebaseTokenPool` | Handles cross-chain burn/mint via Chainlink CCIP |
 | `CCRVault` | Accepts native deposits → mints rebasing principal and will only be deployed in the source chain by architecture logic |
+| Interaction Script | Script for deposit and redeem of funds and tokens from the vault |
 | Bridging Scripts | Automate cross-chain messaging and fee handling |
 | Pool Config Scripts | Scripts for Bridging Token Cross Chain |
+| Deploy Script | Deploys the Token, Pool contracts and Vault only for source chain by design |
+
 
 ---
 
