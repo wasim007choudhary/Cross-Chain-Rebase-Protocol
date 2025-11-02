@@ -1,16 +1,24 @@
-# Compiler files
-cache/
+# Foundry build + cache
 out/
+cache/
+
+# Ignore Foundry lock
+foundry.lock
+
+# Ignore Git submodules reference file
 .gitmodules
 
-# Ignores development broadcast logs
-!/broadcast
+
+
+# CCIP temp data
+/temp-ccip
+
+# Local logs and broadcast artifacts
 /broadcast/*/31337/
 /broadcast/**/dry-run/
-/temp-ccip
 
 # Docs
 docs/
 
-# Dotenv file
+# Environment file
 .env
