@@ -216,9 +216,7 @@ contract CCTest is Test {
         vm.prank(user);
         CCRVault(payable(address(vault))).deposit{value: SEND_AMOUNT}();
         console.log("User CCRToken After Deposit:", sepoliaCCRToken.balanceOf(user));
-
         assertEq(sepoliaCCRToken.balanceOf(user), SEND_AMOUNT);
-
         console.log("\n==== Bridge From Sepolia -> Arbitrum Sepolia ====");
 
         bridgeTokens(
@@ -269,8 +267,6 @@ contract CCTest is Test {
         vm.warp(block.timestamp + 2 hours);
         uint256 sourceChainBalanceNow = sepoliaCCRToken.balanceOf(user);
         console.log("User Balance in source chain After Bridge and time passed - ", sourceChainBalanceNow);
-        //uint256 destChainBalanceNow = arbSepoliaCCRToken.balanceOf(user);
-        //console.log("User Balance in dest Chain After Bridge and time passed - ", destChainBalanceNow);
         console.log("--- Second Bridge Event --- Bridging %d tokens ", sourceChainBalanceNow);
 
         bridgeTokens(
